@@ -11,6 +11,6 @@ import com.roman14.log.info.LoggerInfo;
  */
 public interface Logger
 {
-  public abstract void log(LoggerInfo info, String str);
-  public abstract void close() throws Exception;
+  void log(LoggerInfo info, String str);
+  void close() throws Exception;
 }

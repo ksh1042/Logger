@@ -14,7 +14,7 @@ import java.io.OutputStreamWriter;
  */
 public final class ConsoleLogger extends AbstractDefaultLogger
 {
-  private BufferedWriter bw;
+  private final BufferedWriter bw;
 
   public ConsoleLogger()
   {

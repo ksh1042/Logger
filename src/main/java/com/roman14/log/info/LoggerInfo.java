@@ -10,5 +10,5 @@ package com.roman14.log.info;
  */
 public enum LoggerInfo
 {
-  SYSTEM, ERROR, FATAL, ALERT, DEBUG, INFO;
+  SYSTEM, ERROR, FATAL, ALERT, DEBUG, INFO
 }
