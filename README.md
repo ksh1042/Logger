@@ -6,7 +6,7 @@
 
 
 ## example
-```
+```java
 public class LoggerMain
 {
   private static Logger logger;
