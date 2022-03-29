@@ -27,27 +27,31 @@ public abstract class AbstractDefaultLogger implements Logger
 
   public void log(LoggerInfo info, String str)
   {
-    final StringBuffer sb = new StringBuffer();
+    final StringBuilder sb = new StringBuilder();
     sb.append('[');
     sb.append(SDF.format(new Date()));
+    sb.append("] [");
+    sb.append(this.getCalledClassInfo());
     sb.append("] [");
     sb.append(info.name());
     sb.append("] ");
     sb.append(str);
     sb.append('\n');
+
+    this.write(sb.toString());
   }
 
   /**
    * Logger에 쓰기를 직접적으로 수행할 쓰기 추상 메서드로, 로그 기록 시 직접적으로 쓰기에 대한 내용을 정의한다.
    * 상속받은 클래스의 로그 쓰기 객체를 통해 쓰기를 구현한다.
-   * @param str
+   * @param str - 기록될 로그의 내용을 입력
    */
   protected abstract void write(String str);
 
   /**
    * !!DEBUG ONLY!!
    * 현재 호출되는 클래스(파일명) 및 라인 번호를 반환한다.
-   * @return
+   * @return - 스택트레이스를 확인하여 현재 호출된 클래스명과 라인번호를 반환
    */
   private synchronized String getCalledClassInfo()
   {
