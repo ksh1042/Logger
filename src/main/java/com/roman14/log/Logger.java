@@ -13,4 +13,8 @@ public interface Logger
 {
   void log(LoggerInfo info, String str);
   void close() throws Exception;
+
+  enum LoggerInfo{
+    SYSTEM, ERROR, FATAL, ALERT, DEBUG, INFO
+  }
 }

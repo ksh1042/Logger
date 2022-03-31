@@ -8,6 +8,7 @@ package com.roman14.log.info;
  * @author MDH
  * @since 2021. 6. 16.
  */
+@Deprecated
 public enum LoggerInfo
 {
   SYSTEM, ERROR, FATAL, ALERT, DEBUG, INFO
