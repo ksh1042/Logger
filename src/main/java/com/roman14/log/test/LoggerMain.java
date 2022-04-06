@@ -6,8 +6,6 @@ import static com.roman14.log.Logger.LoggerInfo.*;
 
 public class LoggerMain
 {
-  private static final Logger logger;
-
   static
   {
     try
@@ -18,14 +16,12 @@ public class LoggerMain
     {
       e.printStackTrace();
     }
-
-    logger = LoggerPools.getLogger(LoggerPools.MAIN_LOGGER_NAME);  // 파일에 로그 출력
-    //logger = LoggerPools.getLogger("console");  // 콘솔에 로그 출력
   }
 
   public static void main(String[] args)
   {
-    try
+    // logger = LoggerPools.getLogger("console");  // 콘솔에 로그 출력
+    try(Logger logger = LoggerPools.getLogger(LoggerPools.MAIN_LOGGER_NAME))
     {
       final long startTime = System.currentTimeMillis();
 
@@ -36,7 +32,6 @@ public class LoggerMain
 
       logger.log(SYSTEM, "run time : " + ((double)System.currentTimeMillis() - startTime)/1000 + " sec");
 
-      logger.close();
     }
     catch(Exception e)
     {

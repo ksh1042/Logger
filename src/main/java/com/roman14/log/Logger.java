@@ -9,7 +9,7 @@ import com.roman14.log.info.LoggerInfo;
  * @author MDH
  * @since 2021. 8. 2.
  */
-public interface Logger
+public interface Logger extends AutoCloseable
 {
   void log(LoggerInfo info, String str);
   void close() throws Exception;
