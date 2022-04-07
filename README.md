@@ -1,7 +1,15 @@
 # Logger
-- java6
-- Log4j 등 로그 라이브러리를 사용할 수 없는 폐쇄적 환경에서 로그를 사용하기 위한 프로젝트
+- java7
+- Log4j 등 로그 라이브러리를 사용할 수 없는 폐쇄적 환경에 로그를 사용하기 위한 프로젝트
 - main(파일쓰기), console(콘솔출력) 두 방식을 기본 지원
+
+
+## Stacks
+<div>
+  <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+</div>
 
 
 
@@ -57,4 +65,10 @@ public class LoggerMain
 [2022.03.29 14:30:58] [LoggerMain.java:34] [INFO] info message
 [2022.03.29 14:30:58] [LoggerMain.java:35] [DEBUG] debug message
 [2022.03.29 14:30:58] [LoggerMain.java:37] [SYSTEM] run time : 0.0 sec
+
 ```
+
+## history
+- 22.04.07 안전한 자원반환을 위한 Logger 인터페이스 클래스의 Autocloseable 상속
+- 22.03.31 public LoggerInfo 열거형 클래스를 Logger 인터페이스의 이너클래스로 변경
+- 22.03.29 프로젝트 Graddle 추가
