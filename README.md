@@ -1,7 +1,8 @@
 # Logger
-- java6
+- java7, (test java8) 
 - Log4j 등 로그 라이브러리를 사용할 수 없는 폐쇄적 환경에서 로그를 사용하기 위한 프로젝트
 - main(파일쓰기), console(콘솔출력) 두 방식을 기본 지원
+- Windows 환경
 
 
 
@@ -56,3 +57,4 @@ public class LoggerMain
 [2022.03.29 14:30:58] [LoggerMain.java:35] [DEBUG] debug message
 [2022.03.29 14:30:58] [LoggerMain.java:37] [SYSTEM] run time : 0.0 sec
 ```
+![img.png](images/result.png)
